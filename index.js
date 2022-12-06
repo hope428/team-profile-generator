@@ -104,7 +104,12 @@ function addEngineer() {
   });
 }
 
-function addIntern() {}
+function addIntern() {
+    inquirer.prompt(internQuestions).then((res) => {
+        interns.push(new Intern(res.name, res.id, res.email, res.school))
+        addEmployee()
+    })
+}
 
 function endInquirer() {
   //markup generate goes here
