@@ -3,6 +3,7 @@ const fs = require("fs");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const generateHTML = require("./src/generateHTML");
 let manager;
 let engineers = [];
 let interns = [];
@@ -105,21 +106,18 @@ function addEngineer() {
 }
 
 function addIntern() {
-    inquirer.prompt(internQuestions).then((res) => {
-        interns.push(new Intern(res.name, res.id, res.email, res.school))
-        addEmployee()
-    })
+  inquirer.prompt(internQuestions).then((res) => {
+    interns.push(new Intern(res.name, res.id, res.email, res.school));
+    addEmployee();
+  });
 }
 
 function endInquirer() {
-  //markup generate goes here
-  console.log("All done!");
-  console.log("Manager:");
-  console.log(manager);
-  console.log("Engineers:");
-  console.log(engineers);
-  console.log("Interns:");
-  console.log(interns);
+  //   markup generate goes here
+  const html = generateHTML(manager, engineers, interns);
+  fs.writeFile("./dist/index.html", html, (err) => {
+    err ? console.error(err) : console.log("Success!");
+  });
 }
 
 function addEmployee() {

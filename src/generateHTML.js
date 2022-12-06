@@ -1,9 +1,9 @@
-const generateManagerCard = require('./generateCard')
-const generateEngineerCard = require('./generateCard')
-const generateInternCard = require('./generateCard')
+const generateManagerCard = require("./generateCard");
+const generateEngineerCard = require("./generateCard");
+const generateInternCard = require("./generateCard");
 
 const generateHTML = (manager, engineers, interns) => {
-    `<!DOCTYPE html>
+  return `<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -13,10 +13,8 @@ const generateHTML = (manager, engineers, interns) => {
     </head>
     <body>
         ${generateManagerCard(manager)}
-        ${generateEngineerCard(engineers[0])}
-        ${generateInternCard(interns[0])}
     </body>
-    </html>`
-}
+    </html>`;
+};
 
-module.exports = generateHTML
+module.exports = generateHTML;
