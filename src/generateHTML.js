@@ -2,6 +2,18 @@ const generateManagerCard = require("./generateCard");
 const generateEngineerCard = require("./generateCard");
 const generateInternCard = require("./generateCard");
 
+const generateEngineerCards = (engineers) => {
+  for (const engineer of engineers) {
+    generateEngineerCard(engineer);
+  }
+};
+
+const generateInternCards = (interns) => {
+  for (const intern of interns) {
+    generateInternCard(intern);
+  }
+};
+
 const generateHTML = (manager, engineers, interns) => {
   return `<!DOCTYPE html>
     <html lang="en">
@@ -13,6 +25,8 @@ const generateHTML = (manager, engineers, interns) => {
     </head>
     <body>
         ${generateManagerCard(manager)}
+        ${generateEngineerCards}
+        ${generateInternCards}
     </body>
     </html>`;
 };

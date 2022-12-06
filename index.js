@@ -113,6 +113,7 @@ function addIntern() {
 }
 
 function endInquirer() {
+    console.log(manager.getOfficeNumber())
   //   markup generate goes here
   const html = generateHTML(manager, engineers, interns);
   fs.writeFile("./dist/index.html", html, (err) => {

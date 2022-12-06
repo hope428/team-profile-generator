@@ -1,9 +1,9 @@
 const generateManagerCard = (manager) => {
     return `<div>
-        <p>${manager.name}</p>
-        <p>${manager.id}</p>
-        <p>${manager.email}</p>
-        <p>${manager.officeNumber}</p>
+        <p>${manager.getName()}</p>
+        <p>${manager.getRole()}</p>
+        <p>${manager.getEmail()}</p>
+        <p>${manager.getOfficeNumber()}</p>
     </div>`
 };
 
