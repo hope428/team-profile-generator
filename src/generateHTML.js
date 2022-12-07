@@ -7,7 +7,7 @@ const generateEngineerCards = (engineers) => {
   for (const engineer of engineers) {
     engineerCards.push(generateEngineerCard(engineer));
   }
-  return engineerCards
+  return engineerCards;
 };
 
 const generateInternCards = (interns) => {
@@ -15,7 +15,7 @@ const generateInternCards = (interns) => {
   for (const intern of interns) {
     internCards.push(generateInternCard(intern));
   }
-  return internCards
+  return internCards;
 };
 
 const generateHTML = (manager, engineers, interns) => {
@@ -25,12 +25,19 @@ const generateHTML = (manager, engineers, interns) => {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <title>My Team</title>
     </head>
     <body>
-        ${generateManagerCard(manager)}
-        ${generateEngineerCards(engineers)}
-        ${generateInternCards(interns)}
+        <header>My Team</header>
+        <main class="container">
+            <div class="row justify-content-center">
+            ${generateManagerCard(manager)}
+            ${generateEngineerCards(engineers)}
+            ${generateInternCards(interns)}
+            </div>
+        </main>
     </body>
     </html>`;
 };

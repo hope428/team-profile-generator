@@ -1,5 +1,5 @@
 const generateInternCard = (intern) => {
-    return `<div>
+    return `<div class="card m-3 w-25">
           <p>${intern.name}</p>
           <p>Intern</p>
           <p>${intern.id}</p>
