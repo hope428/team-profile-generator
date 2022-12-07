@@ -1,10 +1,10 @@
 const generateInternCard = (intern) => {
     return `<div class="card m-3 w-25">
-          <p>${intern.name}</p>
-          <p>Intern</p>
-          <p>${intern.id}</p>
-          <p>${intern.email}</p>
-          <p>${intern.school}</p>
+          <p>${intern.getName()}</p>
+          <p>${inter.getRole()}</p>
+          <p>${intern.getId()}</p>
+          <p>${intern.getEmail()}</p>
+          <p>${intern.getSchool()}</p>
       </div>`;
   };
 
