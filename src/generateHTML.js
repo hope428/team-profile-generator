@@ -1,17 +1,21 @@
-const generateManagerCard = require("./generateCard");
-const generateEngineerCard = require("./generateCard");
-const generateInternCard = require("./generateCard");
+const generateManagerCard = require("./generateManagerCard");
+const generateEngineerCard = require("./generateEngineerCard");
+const generateInternCard = require("./generateInternCard");
 
 const generateEngineerCards = (engineers) => {
+  const engineerCards = [];
   for (const engineer of engineers) {
-    generateEngineerCard(engineer);
+    engineerCards.push(generateEngineerCard(engineer));
   }
+  return engineerCards
 };
 
 const generateInternCards = (interns) => {
+  const internCards = [];
   for (const intern of interns) {
-    generateInternCard(intern);
+    internCards.push(generateInternCard(intern));
   }
+  return internCards
 };
 
 const generateHTML = (manager, engineers, interns) => {
@@ -25,8 +29,8 @@ const generateHTML = (manager, engineers, interns) => {
     </head>
     <body>
         ${generateManagerCard(manager)}
-        ${generateEngineerCards}
-        ${generateInternCards}
+        ${generateEngineerCards(engineers)}
+        ${generateInternCards(interns)}
     </body>
     </html>`;
 };
