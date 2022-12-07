@@ -20,15 +20,6 @@ describe("Employee", () => {
       expect(cb).toThrow();
     });
   });
-
-  describe("id is not a number", () => {
-    it("should throw an error if id is not a number", () => {
-      const cb = () => new Employee("Dan", "thirty-four", "dan@test");
-
-      const err = new Error("Id needs to be a number");
-      expect(cb).toThrow(err);
-    });
-  });
   describe("getName method", () => {
     it("should return string when getName is called", () => {
       const name = "Mark";
