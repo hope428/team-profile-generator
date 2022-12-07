@@ -87,27 +87,25 @@ const addNext = [
 ];
 
 function init() {
-  inquirer.prompt(managerQuestions).then((response) => {
-    manager = new Manager(
-      response.name,
-      response.id,
-      response.email,
-      response.officeNumber
-    );
+  inquirer.prompt(managerQuestions).then((res) => {
+    const { name, id, email, officeNumber } = res;
+    manager = new Manager(name, id, email, officeNumber);
     addEmployee();
   });
 }
 
 function addEngineer() {
   inquirer.prompt(engineerQuestions).then((res) => {
-    engineers.push(new Engineer(res.name, res.id, res.email, res.github));
+    const { name, id, email, github } = res;
+    engineers.push(new Engineer(name, id, email, github));
     addEmployee();
   });
 }
 
 function addIntern() {
   inquirer.prompt(internQuestions).then((res) => {
-    interns.push(new Intern(res.name, res.id, res.email, res.school));
+    const { name, id, email, school } = res;
+    interns.push(new Intern(name, id, email, school));
     addEmployee();
   });
 }
