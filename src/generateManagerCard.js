@@ -4,7 +4,7 @@ const generateManagerCard = (manager) => {
           <p>${manager.getName()}</p>
           <p>${manager.getRole()} <i class="fa-solid fa-mug-saucer"></i></p>
         </div>
-        <ul class="border m-3 list-group list-group-flush">
+        <ul class="m-3 list-group list-group-flush">
           <li class="list-group-item">Id: ${manager.getId()}</li>
           <li class="list-group-item">Email: ${manager.getEmail()}</li>
           <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>

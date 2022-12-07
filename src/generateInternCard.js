@@ -4,7 +4,7 @@ const generateInternCard = (intern) => {
           <p>${intern.getName()}</p>
           <p>${intern.getRole()} <i class="fa-solid fa-graduation-cap"></i></p>
         </div>
-        <ul class="border m-3 list-group list-group-flush">
+        <ul class="m-3 list-group list-group-flush">
           <li class="list-group-item">Id: ${intern.getId()}</li>
           <li class="list-group-item">Email: ${intern.getEmail()}</li>
           <li class="list-group-item">School: ${intern.getSchool()}</li>
