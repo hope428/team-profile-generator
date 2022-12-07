@@ -7,7 +7,7 @@ const generateEngineerCards = (engineers) => {
   for (const engineer of engineers) {
     engineerCards.push(generateEngineerCard(engineer));
   }
-  return engineerCards;
+  return engineerCards.join('');
 };
 
 const generateInternCards = (interns) => {
@@ -15,7 +15,7 @@ const generateInternCards = (interns) => {
   for (const intern of interns) {
     internCards.push(generateInternCard(intern));
   }
-  return internCards;
+  return internCards.join('');
 };
 
 const generateHTML = (manager, engineers, interns) => {
