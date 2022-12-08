@@ -6,7 +6,7 @@ const generateInternCard = (intern) => {
         </div>
         <ul class="m-3 list-group list-group-flush">
           <li class="list-group-item">Id: ${intern.getId()}</li>
-          <li class="list-group-item">Email: ${intern.getEmail()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.getEmail()}</a></li>
           <li class="list-group-item">School: ${intern.getSchool()}</li>
         </ul>
       </div>`;

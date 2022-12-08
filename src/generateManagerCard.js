@@ -6,7 +6,9 @@ const generateManagerCard = (manager) => {
         </div>
         <ul class="m-3 list-group list-group-flush">
           <li class="list-group-item">Id: ${manager.getId()}</li>
-          <li class="list-group-item">Email: ${manager.getEmail()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${
+            manager.email
+          }">${manager.getEmail()}</a></li>
           <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
         </ul>
       </div>`;

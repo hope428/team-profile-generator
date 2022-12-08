@@ -6,8 +6,12 @@ const generateEngineerCard = (engineer) => {
     </div>
     <ul class="m-3 list-group list-group-flush">
           <li class="list-group-item">Id: ${engineer.getId()}</li>
-          <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-          <li class="list-group-item">Github: ${engineer.getGithub()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${
+            engineer.email
+          }">${engineer.getEmail()}</a></li>
+          <li class="list-group-item">Github: <a target="_blank" href="https://github.com/${
+            engineer.github
+          }">${engineer.getGithub()}</a></li>
     </ul>
       </div>`;
 };
