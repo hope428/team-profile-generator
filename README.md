@@ -30,7 +30,7 @@ to install all dependencies.
 ## Usage
 
 [Link to repo](https://github.com/hope428/team-profile-generator)<br>
-[Link to sample html file](https://github.com/hope428/team-profile-generator/blob/main/dist/index.html)
+[Link to sample html file](https://github.com/hope428/team-profile-generator/blob/main/dist/index.html) <br>
 [Link to video walkthrough](https://drive.google.com/file/d/1GXfqIZx2XBdxuwOMDU0D6RDdtx6Fe0_3/view)
 
 After installing, run
